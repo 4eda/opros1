@@ -1,21 +1,73 @@
+questions: [
+        {
+            text: "Предпочитаемый тип работы?",
+            type: "radio",
+            id: "one",
+            responses: [
+                {text: 'Люблю работать с фронтендом'}, 
+                {text: 'Люблю работать с бэкендо'},
+                {text: 'Другое'},
+            ]
+        }, {
+            text: "Предпочитаемые дни недели в качестве выходных?",
+            type: "checkbox",
+            id: "two",
+            responses: [
+                {text: 'Пн'}, 
+                {text: 'ВТ'},
+                {text: 'СР'},
+                {text: 'ЧТ'},
+                {text: 'ПТ'},
+                {text: 'СБ'},
+                {text: 'ВС'},
+            ]
+        }, {
+            text: "Предпочитаемый период отпуска?",
+            type: "data",
+            id: "free",
+            responses: [
+                {text: 'Начало'},
+                {text: 'Конец'},
+            ]
+        }, {
+            text: "Do you like to shop?",
+            type: "number",
+            id: "foo",
+            responses: [
+                {text: 'Ожидаемый уровень зарплаты'},
+            ]
+        }, {
+            text: "Знак зодиака",
+            type: "select",
+            id: "five",
+            responses: [
+                {text: 'Овен'},
+                {text: 'Телец'},
+                {text: 'Близнецы'},
+                {text: 'Рак'},
+                {text: 'Лев'},
+                {text: 'Дева'},
+                {text: 'Скорпион'},
+                {text: 'Козерог'},
+                {text: 'Вололей'},
+                {text: 'Рыбы'},
+            ]
+        }, {
+            text: "Хобби",
+            type: "textarea",
+            id: "six",
+            responses: [
+                
+            ]
+        },
+        {
+            text: "Оценка данного задания",
+            type: "",
+            id: "seven",
+            responses: [
 
- : 
+            ]
 
- Роман:Мареев 
-
- Имя:Роман
-
-Фамилия:Мареев
-
-Отчество:Геннадьевич
-
-email:4eda777@mail.ru
-
-Телефон:89205697854
-
-
-  <div v-if="isShow2">
-                            <?php 
-                            include 'main.php'
-                            ?>
-                            </div>
+        }
+    ]
+ };

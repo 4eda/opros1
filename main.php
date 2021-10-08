@@ -15,6 +15,8 @@ function survey(){
     questions: [
         {
             text: "Предпочитаемый тип работы?",
+            type: "radio",
+            id: "one",
             responses: [
                 {text: 'Люблю работать с фронтендом'}, 
                 {text: 'Люблю работать с бэкендо'},
@@ -22,6 +24,8 @@ function survey(){
             ]
         }, {
             text: "Предпочитаемые дни недели в качестве выходных?",
+            type: "checkbox",
+            id: "two",
             responses: [
                 {text: 'Пн'}, 
                 {text: 'ВТ'},
@@ -32,35 +36,52 @@ function survey(){
                 {text: 'ВС'},
             ]
         }, {
-            text: "Where do you live?",
+            text: "Предпочитаемый период отпуска?",
+            type: "data",
+            id: "free",
             responses: [
-                {text: 'Please enter your location'},
+                {text: 'Начало'},
+                {text: 'Конец'},
             ]
         }, {
             text: "Do you like to shop?",
+            type: "number",
+            id: "foo",
             responses: [
-                {text: 'Yes'},
-                {text: 'No'},
+                {text: 'Ожидаемый уровень зарплаты'},
             ]
         }, {
-            text: "Select your favorite things to buy:",
+            text: "Знак зодиака",
+            type: "select",
+            id: "five",
             responses: [
-                {text: 'Clothing'},
-                {text: 'Lingerie'},
-                {text: 'Shoes'},
-                {text: 'Devices'},
-                {text: 'Cars'},
+                {text: 'Овен'},
+                {text: 'Телец'},
+                {text: 'Близнецы'},
+                {text: 'Рак'},
+                {text: 'Лев'},
+                {text: 'Дева'},
+                {text: 'Скорпион'},
+                {text: 'Козерог'},
+                {text: 'Вололей'},
+                {text: 'Рыбы'},
             ]
         }, {
-            text: "Please select your favorite brands:",
+            text: "Хобби",
+            type: "textarea",
+            id: "six",
             responses: [
-                {text: 'Sandro'},
-                {text: 'Maje'},
-                {text: 'Sony'},
-                {text: 'Ferrari'},
-                {text: 'BMW'},
-                {text: 'Asus'},
+                
             ]
+        },
+        {
+            text: "Оценка данного задания",
+            type: "",
+            id: "seven",
+            responses: [
+                
+            ]
+
         }
     ]
  };
@@ -124,11 +145,13 @@ function survey(){
                 </div>
                 <div v-else>
                     <ol>
-                        <li  v-for="response in question.responses">
+                        <li v-for="response in question.responses">
                             <label style="font-size:15" class="form-check-label mb-3">
-                                <input class="form-check-input" type="radio" v-bind:value="response" 
-                                                    v-bind:name="index" 
-                                                    v-model="userResponses[index]"> {{ response.text }}
+                                <input class="form-check-input" 
+                                :type="question.type" 
+                                v-bind:value="response" 
+                                v-bind:name="index" 
+                                v-model="userResponses[index]"> {{ response.text }}
                             </label>
                         </li>
                     </ol>

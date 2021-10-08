@@ -37,7 +37,7 @@
 
                            <button class="btn btn-success"><a href="main.php">Далее</a></button>  
                         
-
+<a href="opros.php"> ssss</a>
                             
                       </div>
                       <div class="col col-lg">
